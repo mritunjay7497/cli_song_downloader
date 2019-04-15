@@ -7,5 +7,5 @@ Also, there is no any windows version of THIS SCIPT. For now it is just for debi
 Other necessary instruction are there in the script.
 
 NOTE IT DOWN
-According youtube terms of service, isolating any audio and video is against legal use of its service. This piece of script is only for OPEN SOURCE MUSIC LOVER and NOT INTENDED FOR ANY COMMERCIAL OR MASS DISTRIBUTION.
+According to youtube terms of service, isolating any audio and video is against legal use of its service. This piece of script is only for OPEN SOURCE MUSIC LOVER and NOT INTENDED FOR ANY COMMERCIAL OR MASS DISTRIBUTION.
 LISTEN TO MUSIC. :D
