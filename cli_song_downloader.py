@@ -79,7 +79,7 @@ link="https://www.youtube.com/watch?v="+var
 #CONVERTING YOUTUBE VIDEO IN TO AUDIO AND DOWNLOADING IT.
 song_name = song.replace(" ", "_")
 print('[+] THE SONG WILL BE SAVED AS:\n%s' % song_name)
-download_cmd = 'youtube-dl '+link+' -o '+song_name
+download_cmd = 'youtube-dl '+link+' -f bestaudio'' -o '+song_name
 print("\n")
 print("\n [+] DOWNLOADING SONG...\n")
 print(download_cmd)
