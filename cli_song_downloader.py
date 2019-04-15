@@ -67,7 +67,7 @@ check_dependencies()
 #SONG DETAILS
 print("enter the name of song\n")
 song = str(input())
-api_key = 'AIzaSyCb2W5-at7jz3SKDHRELTwNb5AtBn7KBKs'
+api_key = 'ENTER THE API_KEY YOU OBTAINED FROM GOOGLE YOUTUBE DATA V3 API HERE.'
 
 #OBTAINING SONG LINK FROM YOUTUBE
 youtube = discovery.build('youtube','v3',developerKey=api_key)
