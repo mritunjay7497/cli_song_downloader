@@ -20,7 +20,6 @@ pkg=[
 	]
 
 exit_status = ['0','0','0']
-print(len(exit_status))
 
 #checking dependencies
 def check_dependencies():
@@ -59,29 +58,43 @@ def check_dependencies():
 
 
 print("\n[+]CHECKING DEPENDENCIES...\n")
-
 check_dependencies()
 
 				
-
 #SONG DETAILS
-print("enter the name of song\n")
-song = str(input())
-api_key = 'ENTER THE API_KEY YOU OBTAINED FROM GOOGLE YOUTUBE DATA V3 API HERE.'
+print("enter the number of song you want to download:\n")
+# song = str(input())
+n=int(input())
+song = []
+i=0
+print("enter the name of songs you want to download:\n")
+while(i<n):
+	song_name = str(input())
+	song.append(song_name)
+	i+=1
+
+print("The songs requested by the user are:\n")
+print(song)
+print('\n\n\n')
 
 #OBTAINING SONG LINK FROM YOUTUBE
+api_key = 'PASTE THE YOUTUBE DATA V3 API KEY HERE' #PASTE THE YOUTUBE DATA V3 API KEY HERE.
 youtube = discovery.build('youtube','v3',developerKey=api_key)
-search_query = youtube.search().list(part="snippet",maxResults=1,q=song)
-response = search_query.execute()
-var = response['items'][0]['id']['videoId']
-link="https://www.youtube.com/watch?v="+var
+val=0
+while(val<len(song)):
+	search_query = youtube.search().list(part="snippet",maxResults=1,q=song[val])
+	response = search_query.execute()
+	var = response['items'][0]['id']['videoId']
+	link="https://www.youtube.com/watch?v="+var
 
-#CONVERTING YOUTUBE VIDEO IN TO AUDIO AND DOWNLOADING IT.
-song_name = song.replace(" ", "_")
-print('[+] THE SONG WILL BE SAVED AS:\n%s' % song_name)
-download_cmd = 'youtube-dl '+link+' -f bestaudio'' -o '+song_name
-print("\n")
-print("\n [+] DOWNLOADING SONG...\n")
-print(download_cmd)
-os.system(download_cmd)
+	#CONVERTING YOUTUBE VIDEO IN TO AUDIO AND DOWNLOADING IT.
+	song[val] = song[val].replace(" ", "_")
+	print("[+] DOWNLOADING SONG... \t%s\n" % song[val])
+	print('[+] THE SONG WILL BE SAVED in /root/Music/'+song[val]+'\n')
+	download_cmd = 'youtube-dl '+link+' -f bestaudio'+' -o /root/Music/'+song[val]
+	os.system(download_cmd)
+	print('\n\n\n')
+	val+=1
+	#DOWNLOAD CHECK
+	
 
