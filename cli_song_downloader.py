@@ -95,6 +95,5 @@ while(val<len(song)):
 	os.system(download_cmd)
 	print('\n\n\n')
 	val+=1
-	#DOWNLOAD CHECK
 	
 
