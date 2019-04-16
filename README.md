@@ -9,3 +9,9 @@ Other necessary instruction are there in the script.
 NOTE IT DOWN
 According to youtube terms of service, isolating any audio and video is against legal use of its service. This piece of script is only for OPEN SOURCE MUSIC LOVER and NOT INTENDED FOR ANY COMMERCIAL OR MASS DISTRIBUTION.
 LISTEN TO MUSIC. :D
+
+
+# update for version 2
+The script is able to downloads multiple songs now.
+The number of songs to download and their names 
+will be asked while executing the script.
