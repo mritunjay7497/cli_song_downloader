@@ -79,7 +79,7 @@ def song_download():
 	print('\n\n\n')
 
 #OBTAINING SONG LINK FROM YOUTUBE
-	api_key = 'AIzaSyCb2W5-at7jz3SKDHRELTwNb5AtBn7KBKs' #PASTE THE YOUTUBE DATA V3 API KEY HERE.
+	api_key = '************************************' #PASTE THE YOUTUBE DATA V3 API KEY HERE.
 	youtube = discovery.build('youtube','v3',developerKey=api_key)
 	val=0
 	while(val<len(song)):
