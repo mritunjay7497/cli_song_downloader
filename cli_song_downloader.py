@@ -96,7 +96,6 @@ def song_download():
 		os.system(download_cmd)
 		print('\n\n\n')
 		os.system('ffmpeg -i '+song[val]+' '+song[val]+'.mp3')
-		os.system('rm /root/Music/'+song[val])
 		val+=1
 
 dependencies_list()
